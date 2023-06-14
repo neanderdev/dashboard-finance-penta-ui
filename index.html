@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <button type="button" class="close" onclick="closeSidebar()">
+            <i class="ph ph-x"></i>
+        </button>
+
+        <div class="logo">
+            <img src="./assets/logo.svg" alt="Logo Penta" />            
+        </div>
+
+        <div class="options">
+            <a href="" class="active">
+                <i class="ph ph-squares-four"></i>
+
+                Dashboard
+            </a>
+
+            <a href="">
+                <i class="ph ph-credit-card"></i>
+
+                Transactions
+            </a>
+
+            <a href="">
+                <i class="ph ph-wallet"></i>
+
+                Wallet
+            </a>
+
+            <a href="">
+                <i class="ph ph-presentation-chart"></i>
+
+                Analytics
+            </a>
+
+            <a href="">
+                <i class="ph ph-user"></i>
+
+                Personal
+            </a>
+
+            <a href="">
+                <i class="ph ph-envelope-simple"></i>
+
+                Message
+            </a>
+
+            <a href="">
+                <i class="ph ph-gear"></i>
+
+                Settings
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div>
+                <button type="button" class="menu" onclick="toggleSidebar()">
+                    <i class="ph ph-list-dashes"></i>
+                </button>
+    
+                <h2>Dashboard</h2>
+            </div>
+
+            <div class="menu">
+                <div class="search">
+                    <input type="text" id="search" name="search" placeholder="Search..." />
+
+                    <i class="ph ph-magnifying-glass"></i>
+                </div>
+
+                <i class="ph ph-bell"></i>
+
+                <img src="https://github.com/neanderdev.png" alt="Avatar" />
+            </div>
+        </header>
+
+        <div class="card-stats">
+            <div class="card-stat">
+                <div class="content">
+                    <div class="icon">
+                        <i class="ph-fill ph-wallet"></i>
+                    </div>
+
+                    <div class="info">
+                        <span>Balance</span>
+
+                        <h2>$41,210</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-stat">
+                <div class="content">
+                    <div class="icon">
+                        <i class="ph-fill ph-money"></i>
+                    </div>
+
+                    <div class="info">
+                        <span>Income</span>
+
+                        <h2>$41,210</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-stat">
+                <div class="content">
+                    <div class="icon">
+                        <i class="ph-fill ph-credit-card"></i>
+                    </div>
+
+                    <div class="info">
+                        <span>Expenses</span>
+
+                        <h2>$41,210</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-stat">
+                <div class="content">
+                    <div class="icon">
+                        <i class="ph-fill ph-currency-circle-dollar"></i>
+                    </div>
+
+                    <div class="info">
+                        <span>Savings</span>
+
+                        <h2>$41,210</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="graphics">
+            <div class="graphic-info">
+                <div class="graphic-overview">
+                    <div class="graphic-overview-container">
+                        <h3>Overview</h3>
+
+                        <div class="graphic-overview-info">
+                            <div class="graphic-overview-label">
+                                <label class="income">Income</label>
+
+                                <label class="expenses">Expenses</label>
+                            </div>
+
+                            <select name="option" id="option">
+                                <option value="monthly">Monthly</option>
+                                <option value="yearly">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <canvas id="chart-overview"></canvas>
+                </div>
+
+                <div class="graphic-stat-info">
+                    <div class="graphic-activity">
+                        <div class="graphic-activity-container">
+                            <h3>Activity</h3>
+    
+                            <div class="graphic-activity-label">
+                                <label class="earning">Earning</label>
+
+                                <label class="spent">Spent</label>
+                            </div>
+                        </div>
+
+                        <canvas id="chart-activity"></canvas>
+                    </div>
+
+                    <div class="graphic-payment">
+                        <h3>Payment</h3>
+
+                        <div class="graphic-payment-container">
+                            <div class="payment">
+                                <div class="icon">
+                                    <i class="ph-fill ph-identification-badge"></i>
+                                </div>
+
+                                <div class="info-container">
+                                    <div class="info">
+                                        <span class="title">Account</span>
+
+                                        <span class="amount">
+                                            $3,241<span>/$10,000</span>
+                                        </span>
+                                    </div>
+
+                                    <progress value="35" max="100" />
+                                </div>
+                            </div>
+
+                            <div class="payment">
+                                <div class="icon">
+                                    <i class="ph-fill ph-files"></i>
+                                </div>
+
+                                <div class="info-container">
+                                    <div class="info">
+                                        <span class="title">Software</span>
+
+                                        <span class="amount">
+                                            $241<span>/$250</span>
+                                        </span>
+                                    </div>
+
+                                    <progress value="90" max="100" />
+                                </div>
+                            </div>
+
+                            <div class="payment">
+                                <div class="icon">
+                                    <i class="ph-fill ph-house-line"></i>
+                                </div>
+
+                                <div class="info-container">
+                                    <div class="info">
+                                        <span class="title">Rent Rouse</span>
+
+                                        <span class="amount">
+                                            $1,541<span>/$52,000</span>
+                                        </span>
+                                    </div>
+
+                                    <progress value="15" max="100" />
+                                </div>
+                            </div>
+
+                            <div class="payment">
+                                <div class="icon">
+                                    <i class="ph-fill ph-coffee"></i>
+                                </div>
+
+                                <div class="info-container">
+                                    <div class="info">
+                                        <span class="title">Food</span>
+
+                                        <span class="amount">
+                                            $141<span>/$1,000</span>
+                                        </span>
+                                    </div>
+
+                                    <progress value="25" max="100" />
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="transaction-info">
+                <div class="credit-card">
+                    <div class="credit-card-header">
+                        <h3>Credit Card</h3>
+
+                        <button type="button" class="add">
+                            <i class="ph ph-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="credit-card-container">
+                        <div class="credit-card-content">
+                            <span class="logo-card">LOGO</span>
+
+                            <span class="number-card">3475 7381 3759 ****</span>
+                        </div>
+
+                        <div class="credit-card-footer">
+                            <div class="total-balance">
+                                <span class="title">Total Balance</span>
+
+                                <span class="amount">3,215,352 USD</span>
+                            </div>
+
+                            <div class="expiration-date">
+                                <span class="title">Exp Date</span>
+
+                                <span class="date">04 / 24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-transaction">
+                    <div class="recent-transaction-header">
+                        <h3>Recent Transaction</h3>
+
+                        <a href="" class="see-all">See all</a>
+                    </div>
+
+                    <div class="recent-transaction-container">
+                        <div class="transaction">
+                            <div class="transaction-content">
+                                <img src="https://github.com/neanderdev.png" alt="Avatar Usuário" class="user-avatar-transaction" />
+
+                                <div class="transaction-from">
+                                    <span class="from">Transfers from</span>
+
+                                    <span class="name-user-from">Neander de Souza</span>
+                                </div>
+                            </div>
+
+                            <span class="income">+$54.08</span>
+                        </div>
+
+                        <div class="transaction">
+                            <div class="transaction-content">
+                                <img src="https://github.com/neanderdev.png" alt="Avatar Usuário" class="user-avatar-transaction" />
+
+                                <div class="transaction-from">
+                                    <span class="from">Transfers from</span>
+
+                                    <span class="name-user-from">Neander de Souza</span>
+                                </div>
+                            </div>
+
+                            <span class="expenses">-$39.65</span>
+                        </div>
+
+                        <div class="transaction">
+                            <div class="transaction-content">
+                                <img src="https://github.com/neanderdev.png" alt="Avatar Usuário" class="user-avatar-transaction" />
+
+                                <div class="transaction-from">
+                                    <span class="from">Transfers from</span>
+
+                                    <span class="name-user-from">Neander de Souza</span>
+                                </div>
+                            </div>
+
+                            <span class="expenses">-$29.78</span>
+                        </div>
+
+                        <div class="transaction">
+                            <div class="transaction-content">
+                                <img src="https://github.com/neanderdev.png" alt="Avatar Usuário" class="user-avatar-transaction" />
+
+                                <div class="transaction-from">
+                                    <span class="from">Transfers from</span>
+
+                                    <span class="name-user-from">Neander de Souza</span>
+                                </div>
+                            </div>
+
+                            <span class="expenses">-$46.61</span>
+                        </div>
+
+                        <div class="transaction">
+                            <div class="transaction-content">
+                                <img src="https://github.com/neanderdev.png" alt="Avatar Usuário" class="user-avatar-transaction" />
+
+                                <div class="transaction-from">
+                                    <span class="from">Transfers from</span>
+
+                                    <span class="name-user-from">Neander de Souza</span>
+                                </div>
+                            </div>
+
+                            <span class="income">+$39.65</span>
+                        </div>
+
+                        <div class="transaction">
+                            <div class="transaction-content">
+                                <img src="https://github.com/neanderdev.png" alt="Avatar Usuário" class="user-avatar-transaction" />
+
+                                <div class="transaction-from">
+                                    <span class="from">Transfers from</span>
+
+                                    <span class="name-user-from">Neander de Souza</span>
+                                </div>
+                            </div>
+
+                            <span class="expenses">-$29.78</span>
+                        </div>
+
+                        <div class="transaction">
+                            <div class="transaction-content">
+                                <img src="https://github.com/neanderdev.png" alt="Avatar Usuário" class="user-avatar-transaction" />
+
+                                <div class="transaction-from">
+                                    <span class="from">Transfers from</span>
+
+                                    <span class="name-user-from">Neander de Souza</span>
+                                </div>
+                            </div>
+
+                            <span class="income">+$46.61</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dataOverview = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Expenses',
+                    data: [500, 900, 950, 800, 100, 752, 600, 685, 102, 259, 870, 402],
+                    borderColor: '#1FCB4F',
+                    backgroundColor: '#1FCB4F',                    
+                    pointStyle: false,
+                    tension: 0.4,
+                },
+                {
+                    label: 'Income',
+                    data: [402, 870, 259, 102, 685, 600, 752, 100, 800, 950, 900, 500],
+                    borderColor: '#FFC01E',
+                    backgroundColor: '#FFC01E',
+                    pointStyle: false,
+                    tension: 0.4,
+                },
+            ],
+        };        
+
+        const configOverview = {
+            type: 'line',
+            data: dataOverview,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                },
+            },            
+        };
+
+        const ctxOverview = document.getElementById('chart-overview');        
+
+        new Chart(ctxOverview, configOverview);
+
+        const dataActivity = {
+            labels: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+            datasets: [
+                {
+                    label: 'Spent',
+                    data: [10, 15, 18, 25, 35, 47, 68],
+                    backgroundColor: '#FFC01E',                    
+                    stack: 'Stack 0',
+                },
+                {
+                    label: 'Earning',
+                    data: [35, 45, 85, 52, 75, 92, 125],
+                    backgroundColor: '#1FCB4F',                    
+                    stack: 'Stack 0',
+                }                
+            ]
+        };
+
+        const configActivity = {
+            type: 'bar',
+            data: dataActivity,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                },
+                interaction: {
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true
+                    }
+                }
+            }
+        };
+
+        const ctxActivity = document.getElementById('chart-activity');        
+
+        new Chart(ctxActivity, configActivity);  
+        
+        var sidebar = document.getElementsByClassName('sidebar')[0];
+        var container = document.getElementsByClassName('container')[0];       
+
+        function toggleSidebar() {
+            sidebar.style.display = 'block';
+            sidebar.style.marginLeft = '0';
+            sidebar.style.animationName = 'showSidebar';
+            sidebar.style.zIndex = '1';
+            container.style.filter = 'blur(2px)';            
+        }
+
+        function closeSidebar() {
+            sidebar.style.marginLeft = '-100vw';
+            sidebar.style.animationName = '';
+            sidebar.style.zIndex = '0';
+            container.style.filter = '';       
+        }
+
+        window.addEventListener('resize', function(event) {
+            if(window.innerWidth > 1024) {
+                sidebar.style.marginLeft = '0';
+                sidebar.style.animationName = '';
+                sidebar.style.zIndex = '0';
+                container.style.filter = '';
+            }           
+        });        
+    </script>
+</body>
+</html>

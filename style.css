@@ -1,0 +1,1331 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+
+  font-size: 1.6rem;
+
+  background-color: #282c35;
+  color: #9e9e9e;
+
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar {
+  min-width: 21.3rem;
+  min-height: 100%;
+
+  background-color: #1a1c22;
+}
+
+.sidebar button.close {
+  visibility: hidden;
+
+  background: transparent;
+  border: 0;
+
+  display: flex;
+  justify-content: end;
+
+  cursor: pointer;
+}
+
+.sidebar button.close i {
+  display: none;
+
+  font-size: 2.4rem;
+
+  color: #1fcb4f;
+}
+
+.logo {
+  padding: 3.5rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 2.664rem;
+
+  padding: 0.75rem 3.5rem;
+}
+
+.options a {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 1.665rem;
+
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+
+  color: #a9a9a9;
+}
+
+.options a.active {
+  color: #1fcb4f;
+}
+
+.options a.active::after {
+  content: "";
+
+  position: absolute;
+
+  width: 0.7rem;
+  height: 2rem;
+
+  background-color: #ffc01e;
+
+  left: 17.2rem;
+
+  border-top-left-radius: 0.42rem;
+  border-bottom-left-radius: 0.42rem;
+}
+
+.options a i {
+  font-size: 2rem;
+}
+
+.options a.active i {
+  color: #1fcb4f;
+}
+
+.container {
+  width: 100%;
+}
+
+.container header {
+  width: 100%;
+  height: 7.4rem;
+
+  background-color: #1a1c22;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container header div {
+  display: flex;
+  align-items: center;
+}
+
+.container header div button.menu {
+  visibility: hidden;
+
+  background: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.container header div button.menu i {
+  font-size: 2.4rem;
+
+  color: #1fcb4f;
+}
+
+.container header div h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2rem;
+
+  color: #ffffff;
+}
+
+.container header div.menu {
+  padding-right: 2.4rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 2.1rem;
+}
+
+.container header div.menu div.search input {
+  width: 21.5rem;
+  height: 3rem;
+
+  padding-left: 1rem;
+
+  background-color: #282c35;
+  color: #9e9e9e;
+
+  border: 0;
+  outline: 0;
+  border-radius: 0.8rem;
+}
+
+.container header div.menu div.search i {
+  position: relative;
+
+  z-index: 1;
+
+  left: -3rem;
+
+  color: #9e9e9e;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}
+
+.container header div.menu i {
+  font-size: 2rem;
+
+  color: #9e9e9e;
+}
+
+.container header div.menu img {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  border-radius: 0.8rem;
+}
+
+.container div.card-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+
+  margin: 2.4rem;
+}
+
+.container div.card-stats div.card-stat {
+  background-color: #1a1c22;
+
+  border-radius: 0.8rem;
+
+  padding: 2.5rem;
+}
+
+.container div.card-stats div.card-stat div.content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.container div.card-stats div.card-stat div.content div.icon {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #282c35;
+  color: #1fcb4f;
+
+  border-radius: 0.8rem;
+}
+
+.container div.card-stats div.card-stat div.content div.icon i {
+  font-size: 2.5rem;
+}
+
+.container div.card-stats div.card-stat div.content div.info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.container div.card-stats div.card-stat div.content div.info span {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.container div.card-stats div.card-stat div.content div.info h2 {
+  font-weight: 500;
+  font-size: 2.7rem;
+  line-height: 4rem;
+}
+
+.container div.graphics {
+  margin: 2.4rem;
+
+  display: grid;
+  grid-template-columns: 1fr 45rem;
+  gap: 2.5rem;
+}
+
+.container div.graphics div.graphic-info {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.container div.graphics div.graphic-info div.graphic-overview {
+  width: 100%;
+  height: 100%;
+
+  background-color: #1a1c22;
+
+  border-radius: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  canvas#chart-overview {
+  max-width: 100%;
+  max-height: 100%;
+
+  padding: 1.5rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  div.graphic-overview-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.5rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  div.graphic-overview-container
+  h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  div.graphic-overview-container
+  div.graphic-overview-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  div.graphic-overview-container
+  div.graphic-overview-info
+  div.graphic-overview-label {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  div.graphic-overview-container
+  div.graphic-overview-info
+  div.graphic-overview-label
+  label {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  color: #9a9a9a;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  div.graphic-overview-container
+  div.graphic-overview-info
+  div.graphic-overview-label
+  label.income::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0.3rem;
+  right: 4.2rem;
+
+  width: 0.9rem;
+  height: 0.9rem;
+
+  border-radius: 0.8rem;
+
+  background-color: #1fcb4f;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  div.graphic-overview-container
+  div.graphic-overview-info
+  div.graphic-overview-label
+  label.expenses::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0.3rem;
+  right: 5rem;
+
+  width: 0.9rem;
+  height: 0.9rem;
+
+  border-radius: 0.8rem;
+
+  background-color: #ffc01e;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-overview
+  div.graphic-overview-container
+  div.graphic-overview-info
+  select {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  width: 7.8rem;
+  height: 2.6rem;
+
+  border-radius: 0.8rem;
+
+  background-color: transparent;
+  color: #9a9a9a;
+}
+
+.container div.graphics div.graphic-info div.graphic-stat-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-activity {
+  width: 100%;
+  height: 26.5rem;
+
+  background-color: #1a1c22;
+
+  border-radius: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-activity
+  canvas#chart-activity {
+  max-width: 100%;
+  max-height: 100%;
+
+  padding: 1.5rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-activity
+  div.graphic-activity-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.5rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-activity
+  div.graphic-activity-container
+  h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-activity
+  div.graphic-activity-container
+  div.graphic-activity-label {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-activity
+  div.graphic-activity-container
+  div.graphic-activity-label
+  label {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  color: #9a9a9a;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-activity
+  div.graphic-activity-container
+  div.graphic-activity-label
+  label.earning::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0.3rem;
+  right: 4.2rem;
+
+  width: 0.9rem;
+  height: 0.9rem;
+
+  border-radius: 0.8rem;
+
+  background-color: #1fcb4f;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-activity
+  div.graphic-activity-container
+  div.graphic-activity-label
+  label.spent::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0.3rem;
+  right: 3.2rem;
+
+  width: 0.9rem;
+  height: 0.9rem;
+
+  border-radius: 0.8rem;
+
+  background-color: #ffc01e;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment {
+  width: 100%;
+  height: 26.5rem;
+
+  background-color: #1a1c22;
+
+  border-radius: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+
+  color: #ffffff;
+
+  margin: 1.5rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  margin: 1.5rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.icon {
+  width: 4rem;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #282c35;
+  color: #1fcb4f;
+
+  border-radius: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.icon
+  i {
+  font-size: 2rem;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.info-container {
+  width: 100%;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.info-container
+  div.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.info-container
+  div.info
+  span.title {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.info-container
+  div.info
+  span.amount {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.info-container
+  div.info
+  span.amount
+  span {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  color: #a9a9a9;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.info-container
+  progress {
+  width: 100%;
+  height: 0.5rem;
+
+  -webkit-appearance: none;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.info-container
+  progress::-webkit-progress-value {
+  border-radius: 0.8rem;
+
+  background-color: #1fcb4f;
+}
+
+.container
+  div.graphics
+  div.graphic-info
+  div.graphic-stat-info
+  div.graphic-payment
+  div.graphic-payment-container
+  div.payment
+  div.info-container
+  progress::-webkit-progress-bar {
+  border-radius: 0.8rem;
+
+  background-color: #282c35;
+}
+
+.container div.graphics div.transaction-info {
+  display: grid;
+  grid-template-rows: 30rem 1fr;
+  gap: 2.5rem;
+}
+
+.container div.graphics div.transaction-info div.credit-card {
+  width: 100%;
+  height: 100%;
+
+  background-color: #1a1c22;
+
+  border-radius: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-header {
+  margin: 1.5rem;
+
+  display: flex;
+  algin-items: center;
+  justify-content: space-between;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-header
+  h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-header
+  button.add {
+  width: 3rem;
+  height: 3rem;
+
+  border: 0;
+  border-radius: 0.8rem;
+
+  background-color: #282c35;
+
+  cursor: pointer;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-header
+  button.add
+  i {
+  color: #1fcb4f;
+
+  font-size: 2rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container {
+  margin: 1.5rem;
+
+  height: 22rem;
+
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #282c35;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  padding: 1.5rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-content
+  span.logo-card {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-content
+  span.number-card {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-footer {
+  padding: 1.5rem;
+
+  background-color: #3e4149;
+
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-footer
+  div.total-balance {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-footer
+  div.total-balance
+  span.title {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+
+  color: #818692;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-footer
+  div.total-balance
+  span.amount {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.05em;
+
+  color: #dcddde;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-footer
+  div.expiration-date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-footer
+  div.expiration-date
+  span.title {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+
+  color: #818692;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.credit-card
+  div.credit-card-container
+  div.credit-card-footer
+  div.expiration-date
+  span.date {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.05em;
+
+  color: #dcddde;
+}
+
+.container div.graphics div.transaction-info div.recent-transaction {
+  width: 100%;
+  height: 100%;
+
+  background-color: #1a1c22;
+
+  border-radius: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-header {
+  padding: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-header
+  h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-header
+  a.see-all {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+
+  color: #1fcb4f;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container {
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container
+  div.transaction {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container
+  div.transaction
+  div.transaction-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container
+  div.transaction
+  div.transaction-content
+  img.user-avatar-transaction {
+  width: 3.5rem;
+  height: 3.5rem;
+
+  border-radius: 0.8rem;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container
+  div.transaction
+  div.transaction-content
+  div.transaction-from {
+  display: flex;
+  flex-direction: column;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container
+  div.transaction
+  div.transaction-content
+  div.transaction-from
+  span.from {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.02em;
+
+  color: #9e9e9e;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container
+  div.transaction
+  div.transaction-content
+  div.transaction-from
+  span.name-user-from {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container
+  div.transaction
+  span.income {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  letter-spacing: -0.02em;
+
+  color: #1fcb4f;
+}
+
+.container
+  div.graphics
+  div.transaction-info
+  div.recent-transaction
+  div.recent-transaction-container
+  div.transaction
+  span.expenses {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  letter-spacing: -0.02em;
+
+  color: #ffc01e;
+}
+
+@media (max-width: 1260px) {
+  .container div.card-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    margin: 2.4rem;
+  }
+
+  .container div.graphics {
+    margin: 2.4rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .container
+    div.graphics
+    div.graphic-info
+    div.graphic-stat-info
+    div.graphic-activity {
+    height: 28rem;
+  }
+
+  .container
+    div.graphics
+    div.graphic-info
+    div.graphic-stat-info
+    div.graphic-payment {
+    height: 28rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+
+    position: fixed;
+
+    margin-left: -100vw;
+
+    animation-duration: 1s;
+  }
+
+  .sidebar button.close {
+    visibility: visible;
+
+    width: 100%;
+
+    padding-top: 1rem;
+    padding-right: 2rem;
+  }
+
+  .sidebar button.close i {
+    display: block;
+  }
+
+  .container header div {
+    padding-left: 2.4rem;
+
+    gap: 2rem;
+  }
+
+  .container header div button.menu {
+    visibility: visible;
+  }
+
+  .container header div.menu div.search i {
+    left: -5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container div.graphics div.graphic-info div.graphic-stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .container
+    div.graphics
+    div.graphic-info
+    div.graphic-stat-info
+    div.graphic-activity {
+    height: 40rem;
+  }
+}
+
+@media (max-width: 630px) {
+  .container header div.menu div.search {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .container div.card-stats {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+
+    margin: 2.4rem;
+  }
+
+  .container
+    div.graphics
+    div.graphic-info
+    div.graphic-stat-info
+    div.graphic-activity {
+    height: 28rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container
+    div.graphics
+    div.graphic-info
+    div.graphic-stat-info
+    div.graphic-activity {
+    height: 22rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container
+    div.graphics
+    div.graphic-info
+    div.graphic-overview
+    div.graphic-overview-container {
+    flex-direction: column;
+  }
+
+  .container
+    div.graphics
+    div.graphic-info
+    div.graphic-stat-info
+    div.graphic-activity
+    div.graphic-activity-container {
+    flex-direction: column;
+  }
+}
+
+@keyframes showSidebar {
+  from {
+    margin-left: -100vw;
+  }
+  to {
+    margin-left: -0vw;
+  }
+}
